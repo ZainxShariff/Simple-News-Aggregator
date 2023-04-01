@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>News Aggregator</title>
+    <style>
+        h5{
+            border: 2px solid rgba(100, 100, 100, 0.071);
+            border-radius:10px;padding: 30px;
+            user-select: none;
+            text-align: center;
+        }
+        h5:hover{
+            background: rgba(255, 255, 255, 0.17);
+            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+            backdrop-filter: blur( 2.5px );
+            -webkit-backdrop-filter: blur( 2.5px );
+            border-radius: 10px;
+            border: 1px solid rgba( 255, 255, 255, 0.18 );
+        }
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="jumbotron">
+        <center><h1 style="font-family: courier new;">News Aggregator</h1>
+           <a href="/" class="btn btn-outline-danger">Refresh News</a>
+        </form>
+    </center>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                    <h1 class="text-centre" style="font-family: courier new;"> Headlines from Times of India</h1><br><hr><br>
+                    {% for n in toi_news %}
+                    <h5 >• {{n}} </h5>
+                    <br>
+                    {% endfor %}
+                    <br>
+            </div>
+            <div class="col-6">
+                    <h1 class="text-centre" style="font-family: courier new;">Headlines from Times Now News</h1><br><hr><br>
+                    {% for htn in ht_news %}
+                    <h5>• {{htn}} </h5>
+                    <br>
+                    {% endfor %}
+                    <br>
+            </div>
+        </div>
+ 
+ 
+</div>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
